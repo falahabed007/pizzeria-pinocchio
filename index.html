@@ -3088,7 +3088,7 @@ let pastaBasePrice = 0;
 
 function openPasta(element) {
     const num = element.dataset.itemNum;
-    const name = (num ? num + ' ' : '') + element.querySelector('h3').innerText;
+    const name = (num ? num + ' ' : '') + ohneAllergene(element.querySelector('h3'));
     const desc = element.querySelector('p').innerText;
     const priceTxt = element.querySelector('.price').innerText;
     
@@ -3213,7 +3213,7 @@ const saladExtrasList = [
 
 function openSalad(element) {
     const num = element.dataset.itemNum;
-    const name = (num ? num + ' ' : '') + element.querySelector('h3').innerText;
+    const name = (num ? num + ' ' : '') + ohneAllergene(element.querySelector('h3'));
     const desc = element.querySelector('p').innerText;
     const priceTxt = element.querySelector('.price').innerText;
     
@@ -3307,7 +3307,7 @@ function closeSaladPopup() {
 <script>
 function openQuickAdd(element) {
     const num = element.dataset.itemNum;
-    const name = (num ? num + ' ' : '') + element.querySelector('h3').innerText;
+    const name = (num ? num + ' ' : '') + ohneAllergene(element.querySelector('h3'));
     const descElement = element.querySelector('p');
     const desc = descElement ? descElement.innerText : "";
     const priceTxt = element.querySelector('.price').innerText;
@@ -3409,7 +3409,7 @@ let pbDips = { knobi: 0, kraeuter: 0 };
 
 function openPbCustom(element) {
     const num = element.dataset.itemNum;
-    const name = (num ? num + ' ' : '') + element.querySelector('h3').innerText;
+    const name = (num ? num + ' ' : '') + ohneAllergene(element.querySelector('h3'));
     const priceTxt = element.querySelector('.price').innerText;
     
     pbBasePrice = parseFloat(priceTxt.replace('€', '').replace('(', '').replace(')', '').replace(',', '.').trim());
@@ -3498,7 +3498,7 @@ let dipCounts = { knobi: 0, kraeuter: 0 };
 
 function openDipPopup(element) {
     const num = element.dataset.itemNum;
-    const name = (num ? num + ' ' : '') + element.querySelector('h3').innerText;
+    const name = (num ? num + ' ' : '') + ohneAllergene(element.querySelector('h3'));
     const priceTxt = element.querySelector('.price').innerText;
     
     dipBasePrice = parseFloat(priceTxt.replace('€', '').replace('(', '').replace(')', '').replace(',', '.').trim());
@@ -3938,6 +3938,11 @@ document.addEventListener('keydown', function(e) {
 
 <script>
 (function() {
+function ohneAllergene(h3) {  // Gerichtsname ohne die angehaengten Allergen-Codes (<sup> aus AM)
+  var k = h3.cloneNode(true);
+  k.querySelectorAll('sup').forEach(function (s) { s.remove(); });
+  return k.textContent.trim();
+}
 var AM = {
   // Allergene je Artikelnummer: nach üblichen Rezepturen ermittelt, im Zweifel gekennzeichnet. Eine Liste des Wirts hat Vorrang.
   "1": "A,G",
