@@ -479,9 +479,10 @@ app.get('/api/config', (req, res) => res.json({
   whatsapp: process.env.WHATSAPP_NUMBER || '',
   serviceFee: 0.99,
   deliveryCities: {
-    'Beckum':          { min: 10.00, fee: 2.00 },
-    'Südkirchen / Capelle': { min: 15.00, fee: 2.50 },
-    'Andere Orte':          { min: 20.00, fee: 4.00 },
+    'Beckum':    { min: 20.00, fee: 1.50 },
+    'Neubeckum': { min: 25.00, fee: 3.00 },
+    'Roland':    { min: 25.00, fee: 3.00 },
+    'Vellern':   { min: 25.00, fee: 3.00 },
   }
 }));
 
@@ -530,20 +531,12 @@ app.get('/api/availability', async (req, res) => {
 });
 
 // ── Finanzschüler-Rabatt: serverseitig nachrechnen ───────────────
-// Flyer: "Bei Lieferung erhalten Finanzschüler ab 70 Euro 10 Prozent Rabatt."
-// Der Client darf einen Betrag vorschlagen – maßgeblich ist allein diese Rechnung.
-const RABATT_CODE        = 'ZZ-STILLGELEGT';
-const RABATT_PROZENT     = 0.10;
-const RABATT_MINDESTWERT = 70.00;
+// Rabattsystem an diesem Standort abgeschaltet: es gibt keinen Rabattcode.
+// Die Funktion bleibt, weil Bestell- und Zahlungswege sie aufrufen.
+const RABATT_CODE = 'ZZ-STILLGELEGT';
 
-function berechneRabatt({ coupon, mode, items, subtotal }) {
-  if (!coupon || String(coupon).toUpperCase() !== RABATT_CODE) return 0;
-  if (mode !== 'lieferung') return 0;                 // laut Flyer nur bei Lieferung
-  const warenwert = Array.isArray(items)
-    ? items.reduce((a, i) => a + (Number(i.price) || 0) * (Number(i.qty) || 1), 0)
-    : Number(subtotal) || 0;
-  if (warenwert < RABATT_MINDESTWERT) return 0;
-  return Math.round(warenwert * RABATT_PROZENT * 100) / 100;
+function berechneRabatt() {
+  return 0;
 }
 
 // ── Neue Web-Bestellung (pending) ────────────────────────────────
@@ -1361,26 +1354,43 @@ function calcAutoMode() {
   // Wochentag berechnen (0=So, 1=Mo, ..., 6=Sa)
   const wd = new Date(year, mon - 1, day).getDay();
 
-  // Zeiten wie auf der gedruckten Speisekarte
-  // Montag: 16:30–21:00
-  if (wd === 1) {
-    return (mins >= 16*60+30 && mins < 21*60) ? 'online' : 'geschlossen';
+  // Öffnungszeiten laut Betreiber (dieselbe Angabe wie im Impressum/auf der Seite):
+  // Mo Ruhetag (außer Feiertage), Di–Fr 11:00–14:00 und 16:00–22:00,
+  // Sa, So und Feiertage 14:00–22:00
+  if (istFeiertagNRW(year, mon, day) || wd === 0 || wd === 6) {
+    return (mins >= 14*60 && mins < 22*60) ? 'online' : 'geschlossen';
   }
 
-  // Freitag, Samstag: 15:30–21:30
-  if (wd === 5 || wd === 6) {
-    return (mins >= 15*60+30 && mins < 21*60+30) ? 'online' : 'geschlossen';
-  }
+  // Montag: Ruhetag
+  if (wd === 1) return 'geschlossen';
 
-  // Sonntag: 13:00–21:30
-  if (wd === 0) {
-    return (mins >= 13*60 && mins < 21*60+30) ? 'online' : 'geschlossen';
-  }
-
-  // Di, Mi, Do: 11:30–14:00 & 16:30–21:30
-  const session1 = mins >= 11*60+30 && mins < 14*60;
-  const session2 = mins >= 16*60+30 && mins < 21*60+30;
+  // Di–Fr: 11:00–14:00 & 16:00–22:00
+  const session1 = mins >= 11*60 && mins < 14*60;
+  const session2 = mins >= 16*60 && mins < 22*60;
   return (session1 || session2) ? 'online' : 'geschlossen';
+}
+
+// Gesetzliche Feiertage in Nordrhein-Westfalen
+function istFeiertagNRW(year, mon, day) {
+  // Ostersonntag (Gaußsche Osterformel, gregorianisch)
+  const a = year % 19, b = Math.floor(year / 100), c = year % 100;
+  const d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25);
+  const g = Math.floor((b - f + 1) / 3);
+  const h2 = (19 * a + b - d - g + 15) % 30;
+  const i = Math.floor(c / 4), k = c % 4;
+  const l = (32 + 2 * e + 2 * i - h2 - k) % 7;
+  const mm = Math.floor((a + 11 * h2 + 22 * l) / 451);
+  const oMon = Math.floor((h2 + l - 7 * mm + 114) / 31);
+  const oDay = ((h2 + l - 7 * mm + 114) % 31) + 1;
+  const ostern = new Date(year, oMon - 1, oDay);
+  const verschoben = n => { const t = new Date(ostern); t.setDate(t.getDate() + n); return [t.getMonth() + 1, t.getDate()]; };
+  const feste = [[1,1],[5,1],[10,3],[11,1],[12,25],[12,26],
+    verschoben(-2),   // Karfreitag
+    verschoben(1),    // Ostermontag
+    verschoben(39),   // Christi Himmelfahrt
+    verschoben(50),   // Pfingstmontag
+    verschoben(60)];  // Fronleichnam
+  return feste.some(([m2, d2]) => m2 === mon && d2 === day);
 }
 
 cron.schedule('* * * * *', async () => {
@@ -1399,8 +1409,8 @@ cron.schedule('* * * * *', async () => {
 // Eine Kartenzahlung wird erst zur Bestellung, wenn Stripes Webhook sie
 // meldet. Bricht diese Kette, bleibt die Bestellung auf `awaiting_payment`
 // stehen: Der Gast hat gezahlt, die Kueche sieht nichts, und nichts meldet
-// sich. Genau das ist Ararat, Amoura und Vorhelm von April bis September 2026
-// passiert - allein in den letzten 30 Tagen 18 Zahlungen ueber 757,91 €.
+// sich. Das ist in aelteren Installationen dieses Systems wochenlang
+// unbemerkt passiert.
 //
 // Der Wachhund schaut alle fuenf Minuten nach Bestellungen, die laenger als
 // zehn Minuten warten, fragt bei Stripe nach und holt sie nach. Er ist
@@ -1408,8 +1418,8 @@ cron.schedule('* * * * *', async () => {
 // und es faellt trotzdem auf, statt monatelang unbemerkt zu bleiben.
 const WACHHUND_MINUTEN = 10;
 // Obere Altersgrenze, und die ist nicht optional. Ohne sie greift der
-// Wachhund beim ersten Lauf nach JEDER haengenden Bestellung - bei Ararat,
-// Amoura und Vorhelm also nach allem seit April. Die Liste der eingehenden
+// Wachhund beim ersten Lauf nach JEDER haengenden Bestellung - in einer
+// bestehenden Installation also nach allem seit Monaten. Die Liste der eingehenden
 // Bestellungen im Dashboard hat keine Datumsgrenze und sortiert die aeltesten
 // nach oben: Mitten im Betrieb stuende dort eine Wand aus Monate alten
 // "neuen" Bestellungen, jede mit Alarmton. Und weil "pending" im Umsatz

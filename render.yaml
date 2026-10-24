@@ -71,7 +71,7 @@ services:
 
       # ── Sonstiges ──
       - key: WHATSAPP_NUMBER
-        value: "4925218579479"
+        value: ""
       - key: STEUERNUMMER
         sync: false
       - key: PRINTNODE_API_KEY
