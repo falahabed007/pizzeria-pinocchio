@@ -1,0 +1,131 @@
+@quelle	Gedruckte Karte Pizzeria Pinocchio Beckum, Kartenbilder karte/Anhang 1-1.png bis Anhang 1-6.png (PDF-Scan), eingelesen am 2026-10-24
+@hinweis	Karte ohne Extrabelag-Preise. Größen laut Kartenkopf: Klein 20 cm, Mittel 28 cm, Groß 32 cm. Hähnchengeschnetzeltes steht auf der Karte als "Hähnchengechnetzeltes" (Tippfehler im Druck, hier korrigiert). Cola, Fanta, Sprite sowie Rotwein und Weißwein sind je Sorte einzeln angelegt, auf der Karte stehen sie in einer Zeile mit einem Preis. Mittagsangebote: Karte nennt Mo.-Fr., Montag ist Ruhetag, daher hier Di.-Fr. Nummern 88-139 stehen nicht auf der Karte.
+@pos_start	pizza
+@groessen	mini=20 cm	normal=28 cm	maxi=32 cm
+# pizza	Pizza	pizza
+1	Margherita	Tomatensoße, Käse	4	6.5	9
+2	Salami	Rindersalami	5.5	7	9.5
+3	Zwiebel	Zwiebeln	5	7	9.5
+4	Paprika	Paprika	5	7	9.5
+5	Prosciutto	Schinken	5.5	7	9.5
+6	Funghi	Pilze	5.5	7	9.5
+7	Spinat	Spinat	5.5	7	9.5
+8	Mais	Mais	5	7	9.5
+9	Frutti di Mare	Meeresfrüchte	7	9	11.5
+10	Tonno	Thunfisch	6	9	11
+11	Napoli	Sardellen, Thunfisch, Oliven	7	9.5	12.5
+12	Prosciutto e Funghi	Champignons, Schinken	7	9	12
+13	Tono e Chipola	Thunfisch, Zwiebeln	7	9	12
+14	Chiara	Thunfisch, Schinken	7	9	12
+15	Lorella	Salami, Schinken, Champignons	7	9.5	12
+16	Calzone	Salami, Schinken, Champignons	7	9.5	12
+17	Hawaii	Schinken, Ananas	7	9.5	12
+18	Diavolo	Schinken, Champignons, Paprika	7	9.5	12
+19	Quattro Stagioni	Paprika, Champignons, Spinat, Schinken	7.5	10	13
+20	Ibo	Thunfisch, Krabben	7	9.5	13
+21	Aulona	Spinat, Schafskäse	7	9.5	12
+22	Maria	Salami, Champignons	7	9	12
+23	Mio	Salami, Schinken	7	9	12
+24	Dino	Schinken, Thunfisch, Champignons	7	9.5	12.5
+25	Fantastica	Schinken, Champignons, Artischocken, Eier	7	9.5	13
+26	Vegetarisch	Zwiebeln, Paprika, Brokkoli, Champignons	7	9.5	12.5
+27	Carlo	Schinken, Spinat, Eier	7	9.5	12.5
+28	Roland	Schinken, Thunfisch, Sardellen, Kapern	7	10	13
+29	Tiago	Hähnchenbrust, Brokkoli, Sauce Hollandaise	7	10	13
+30	Bolognese	Rinderhackfleisch	7	9	12.5
+31	Frank	Schinken, Thunfisch, Champignons, Krabben	7	10	13
+32	Krabben	Krabben	7	9	12.5
+33	Massi	Spinat, Krabben	7	9.5	13
+34	Dagmar	Schinken, Salami, Champignons, Ananas	7	9.5	12.5
+35	Art des Hauses	Salami, Schinken, Champignons, Thunfisch	7.5	10	13
+36	Leon	Schinken, Brokkoli, Sauce Hollandaise	7	9.5	12.5
+37	Chrissi	Schinken, Paprika, Zwiebeln, Ananas	7	9.5	13
+38	Quattro Formaggi	vier verschiedene Käsesorten	7	9.5	13
+39	Nita	Thunfisch, Ananas	7	9.5	13
+40	Salmone	Lachs	7	10	13
+41	Mozzarella Pomodore	fr. Tomaten, Mozzarella, Basilikum	7	10	13
+42	Special	Spinat, Champignons, Brokkoli, Sauce Hollandaise	7.5	10	13
+43	Chef	Thunfisch, Zwiebeln, Paprika, Champignons	7.5	10	13
+44	Rucola	Parmaschinken, Parmesan, Rucola	7.5	10	13
+45	Miami	Gyros, Zwiebeln	7	9.5	12.5
+46	Sante Fee	Gyros, frischen Tomaten, Schafskäse	7.5	10	13
+47	Alaska	Salami, Gyros, milde Peperoni	7.5	10	13
+83	Pizza Tim	Thunfisch, milde Peperoni, Zwiebel, Eier	7.5	10	13
+84	Pizza Philipp	milde Peperoni, Kapern, Krabben, Oliven, Sardellen	7.5	10	13
+85	Pizza Salat	Eisbergsalat, Tomaten, Gurken, Joghurtdressing	7.5	10	13
+86	Pizza Sucuk	Knoblauchwurst	7	9	13
+87	Pizza Döner	Döner, Zwiebeln	7	10	13
+# nudeln	Nudeln	simple
+48	Lasagne al Forno		10
+49	Spaghetti Carbonara		9.5
+50	Spaghetti Bolognese		9.5
+51	Spaghetti Aglio Olio	Cherrytomaten, milde Peperoni, Olivenöl, Knoblauch	10
+52	Spaghetti Frutti di mare	Meeresfrüchte	10
+# penne	Penne	simple
+53	Penne Alla Panna	Schinken, Sahnesauce	9.5
+54	Penne Al Forno	Schinken, Sahnesauce, Käse überbacken	10
+55	Penne Allabiata	Tomaten, Sahnesauce, Champignons, Paprika, Peperoni	10
+56	Penne André	Tomaten, Sahnesauce, Brokkoli, Champignons, Paprika	10
+57	Penne Marcel	Tomaten, Sahnesauce, Thunfisch, Krabben, Mais, Paprika, Peperoni	10
+58	Penne Adi	Tomatensahnesauce, Hähnchenbrust, Brokkoli	10
+59	Penne Mare E Monti	Tomaten, Sahnesauce, Thunfisch, Krabben, Käse überbacken	10
+60	Penne Bolognese	Rinderhackfleisch	10
+61	Penne Salmone	Sahnesauce, Lachs	10
+# tortellini	Tortellini	simple
+62	Tortellini Al Forno	Schinken, Sahnesauce, Käse überbacken	10
+63	Tortellini Chef	Schinken, Champignons, Sahnesauce	10
+64	Tortellini Bolognese	Rinderhackfleisch	10
+65	Tortellini Jonni	Brokkoli, Schinken, Sahnesauce	10
+66	Tortellini Lukas	Schinken, Spinat, Sahnesauce	10
+# gnocchi	Gnocchi	simple
+67	Gnocchi Bolognese	Rinderhackfleisch	10
+68	Gnocchi	Gorgonzola, Spinat, Sahnesauce	10
+69	Gnocchi Quattro Formaggi	vier verschiedene Käsesorten, Sahnesauce	10
+# salat	Salat	simple
+70	Insalata Mista	Tomaten, Gurken, Salat	6
+71	Insalata Primavera	Tomaten, Gurken, Salat, Thunfisch, Schinken, Käse	9
+72	Insalata della Casa	Tomaten, Gurken, Salat, Thunfisch, Zwiebeln, Käse, Eier	9
+73	Insalata Pinocchio	Tomaten, Gurken, Salat, Zwiebeln, Mais, Artischocken, Möhren, Paprika, Käse	10
+74	Insalata della Chef	Tomaten, Gurken, Salat, Hähnchen	9.5
+75	Insalata Mozzarella Pomodoro	Salat, Tomaten, Mozzarella, fr. Basilikum	10
+# pizzabroetchen	Pizzabrötchen (8 Stk.)	simple
+76	Pizzabrötchen mit Kräutercreme		4
+77	Pizzabrötchen mit Thunfisch		7
+78	Pizzabrötchen mit Salami		7
+79	Pizzabrötchen mit Schinken		7
+80	Pizzabrötchen mit Schafskäse, Spinat		7
+81	Pizzabrötchen mit Knoblauchwurst		7
+82	Pizzabrötchen mit Käse		6
+# haehnchen-curry	Hähnchen mit Curry	simple
+140	Hähnchengeschnetzeltes Makkaroni	Makkaroni, Curry	10
+141	Hähnchengeschnetzeltes Pilze, Brokkoli	Makkaroni, Pilzen, Brokkoli, Curry	11
+142	Hähnchengeschnetzeltes Krabben, Champignons	Makkaroni, Krabben, Champignons, Curry	11
+# getraenke	Getränke	simple	nummer_zeigen=false
+	Cola	0,33 l Flasche	2.5
+	Fanta	0,33 l Flasche	2.5
+	Sprite	0,33 l Flasche	2.5
+	Apfelschorle	0,33 l Flasche	2.5
+	Mineralwasser	0,25 l Flasche	2.5
+	Bier	0,33 l Flasche	2.5
+	Rotwein Lambrusco	0,2 l Flasche	6
+	Rotwein Primitivo	0,2 l Flasche	6
+	Weißwein Lugana	0,33 l Flasche	6
+	Weißwein Pinot Grigio	0,33 l Flasche	6
+# desserts	Desserts	simple	nummer_zeigen=false
+	Tiramisu		5.5
+	Panna Cotta		5
+# mittagsangebote	Mittagsangebote (Di.-Fr. 11:00-14:00 Uhr)	simple	nur_mittags=true	nummer_zeigen=false
+	Mittagsangebot Pizza	Jede 28er Pizza mit Getränk 0,33 l	10.5
+	Mittagsangebot Nudelgericht	Jedes Nudelgericht mit Getränk 0,33 l	10.5
+	Mittagsangebot Salat	Jeder große Salat mit Getränk 0,33 l	10.5
+# spezialangebote	Spezialangebote	familie	nummer_zeigen=false
+	Familienpizza 40 cm	nach Wahl mit max. 3 Zutaten	20	belegbar=true
+	Familienpizza 50 cm	nach Wahl mit max. 3 Zutaten	28.5	belegbar=true
+	Party-Pizzablech	40 x 60 cm	30
+	Nudel Blech XXL		30
+# abholer-angebote	Abholer-Angebote	simple	nummer_zeigen=false
+	Super Angebot 1	3 Pizzen (28 cm), 1 Cola (0,33 l), 6 Pizzabrötchen	25.5
+	Super Angebot 2	2 Pizzen (28 cm), 1 Nudelgericht, 1 Cola (0,33 l), 6 Pizzabrötchen	25.5
+	Maxi Angebot	2 Pizzen (32 cm), 1 großer Salat, 1 Cola (1 l), 6 Pizzabrötchen	29.5
+# buffet	Italienisches Buffet	simple	nummer_zeigen=false
+	Italienisches Buffet	Jeden 2. Samstag im Monat, Termin bitte vorab anfragen	22.9

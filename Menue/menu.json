@@ -1,0 +1,901 @@
+{
+  "_quelle": "Gedruckte Karte Pizzeria Pinocchio Beckum, Kartenbilder karte/Anhang 1-1.png bis Anhang 1-6.png (PDF-Scan), eingelesen am 2026-10-24",
+  "_hinweis": "Karte ohne Extrabelag-Preise. Größen laut Kartenkopf: Klein 20 cm, Mittel 28 cm, Groß 32 cm. Hähnchengeschnetzeltes steht auf der Karte als \"Hähnchengechnetzeltes\" (Tippfehler im Druck, hier korrigiert). Cola, Fanta, Sprite sowie Rotwein und Weißwein sind je Sorte einzeln angelegt, auf der Karte stehen sie in einer Zeile mit einem Preis. Mittagsangebote: Karte nennt Mo.-Fr., Montag ist Ruhetag, daher hier Di.-Fr. Nummern 88-139 stehen nicht auf der Karte.",
+  "_groessen": {
+    "mini": "20 cm",
+    "normal": "28 cm",
+    "maxi": "32 cm"
+  },
+  "_pos_start": "pizza",
+  "kategorien": [
+    {
+      "id": "pizza",
+      "titel": "Pizza",
+      "typ": "pizza",
+      "items": [
+        {
+          "num": "1",
+          "name": "Margherita",
+          "desc": "Tomatensoße, Käse",
+          "mini": 4,
+          "normal": 6.5,
+          "maxi": 9
+        },
+        {
+          "num": "2",
+          "name": "Salami",
+          "desc": "Rindersalami",
+          "mini": 5.5,
+          "normal": 7,
+          "maxi": 9.5
+        },
+        {
+          "num": "3",
+          "name": "Zwiebel",
+          "desc": "Zwiebeln",
+          "mini": 5,
+          "normal": 7,
+          "maxi": 9.5
+        },
+        {
+          "num": "4",
+          "name": "Paprika",
+          "desc": "Paprika",
+          "mini": 5,
+          "normal": 7,
+          "maxi": 9.5
+        },
+        {
+          "num": "5",
+          "name": "Prosciutto",
+          "desc": "Schinken",
+          "mini": 5.5,
+          "normal": 7,
+          "maxi": 9.5
+        },
+        {
+          "num": "6",
+          "name": "Funghi",
+          "desc": "Pilze",
+          "mini": 5.5,
+          "normal": 7,
+          "maxi": 9.5
+        },
+        {
+          "num": "7",
+          "name": "Spinat",
+          "desc": "Spinat",
+          "mini": 5.5,
+          "normal": 7,
+          "maxi": 9.5
+        },
+        {
+          "num": "8",
+          "name": "Mais",
+          "desc": "Mais",
+          "mini": 5,
+          "normal": 7,
+          "maxi": 9.5
+        },
+        {
+          "num": "9",
+          "name": "Frutti di Mare",
+          "desc": "Meeresfrüchte",
+          "mini": 7,
+          "normal": 9,
+          "maxi": 11.5
+        },
+        {
+          "num": "10",
+          "name": "Tonno",
+          "desc": "Thunfisch",
+          "mini": 6,
+          "normal": 9,
+          "maxi": 11
+        },
+        {
+          "num": "11",
+          "name": "Napoli",
+          "desc": "Sardellen, Thunfisch, Oliven",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 12.5
+        },
+        {
+          "num": "12",
+          "name": "Prosciutto e Funghi",
+          "desc": "Champignons, Schinken",
+          "mini": 7,
+          "normal": 9,
+          "maxi": 12
+        },
+        {
+          "num": "13",
+          "name": "Tono e Chipola",
+          "desc": "Thunfisch, Zwiebeln",
+          "mini": 7,
+          "normal": 9,
+          "maxi": 12
+        },
+        {
+          "num": "14",
+          "name": "Chiara",
+          "desc": "Thunfisch, Schinken",
+          "mini": 7,
+          "normal": 9,
+          "maxi": 12
+        },
+        {
+          "num": "15",
+          "name": "Lorella",
+          "desc": "Salami, Schinken, Champignons",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 12
+        },
+        {
+          "num": "16",
+          "name": "Calzone",
+          "desc": "Salami, Schinken, Champignons",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 12
+        },
+        {
+          "num": "17",
+          "name": "Hawaii",
+          "desc": "Schinken, Ananas",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 12
+        },
+        {
+          "num": "18",
+          "name": "Diavolo",
+          "desc": "Schinken, Champignons, Paprika",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 12
+        },
+        {
+          "num": "19",
+          "name": "Quattro Stagioni",
+          "desc": "Paprika, Champignons, Spinat, Schinken",
+          "mini": 7.5,
+          "normal": 10,
+          "maxi": 13
+        },
+        {
+          "num": "20",
+          "name": "Ibo",
+          "desc": "Thunfisch, Krabben",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 13
+        },
+        {
+          "num": "21",
+          "name": "Aulona",
+          "desc": "Spinat, Schafskäse",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 12
+        },
+        {
+          "num": "22",
+          "name": "Maria",
+          "desc": "Salami, Champignons",
+          "mini": 7,
+          "normal": 9,
+          "maxi": 12
+        },
+        {
+          "num": "23",
+          "name": "Mio",
+          "desc": "Salami, Schinken",
+          "mini": 7,
+          "normal": 9,
+          "maxi": 12
+        },
+        {
+          "num": "24",
+          "name": "Dino",
+          "desc": "Schinken, Thunfisch, Champignons",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 12.5
+        },
+        {
+          "num": "25",
+          "name": "Fantastica",
+          "desc": "Schinken, Champignons, Artischocken, Eier",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 13
+        },
+        {
+          "num": "26",
+          "name": "Vegetarisch",
+          "desc": "Zwiebeln, Paprika, Brokkoli, Champignons",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 12.5
+        },
+        {
+          "num": "27",
+          "name": "Carlo",
+          "desc": "Schinken, Spinat, Eier",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 12.5
+        },
+        {
+          "num": "28",
+          "name": "Roland",
+          "desc": "Schinken, Thunfisch, Sardellen, Kapern",
+          "mini": 7,
+          "normal": 10,
+          "maxi": 13
+        },
+        {
+          "num": "29",
+          "name": "Tiago",
+          "desc": "Hähnchenbrust, Brokkoli, Sauce Hollandaise",
+          "mini": 7,
+          "normal": 10,
+          "maxi": 13
+        },
+        {
+          "num": "30",
+          "name": "Bolognese",
+          "desc": "Rinderhackfleisch",
+          "mini": 7,
+          "normal": 9,
+          "maxi": 12.5
+        },
+        {
+          "num": "31",
+          "name": "Frank",
+          "desc": "Schinken, Thunfisch, Champignons, Krabben",
+          "mini": 7,
+          "normal": 10,
+          "maxi": 13
+        },
+        {
+          "num": "32",
+          "name": "Krabben",
+          "desc": "Krabben",
+          "mini": 7,
+          "normal": 9,
+          "maxi": 12.5
+        },
+        {
+          "num": "33",
+          "name": "Massi",
+          "desc": "Spinat, Krabben",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 13
+        },
+        {
+          "num": "34",
+          "name": "Dagmar",
+          "desc": "Schinken, Salami, Champignons, Ananas",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 12.5
+        },
+        {
+          "num": "35",
+          "name": "Art des Hauses",
+          "desc": "Salami, Schinken, Champignons, Thunfisch",
+          "mini": 7.5,
+          "normal": 10,
+          "maxi": 13
+        },
+        {
+          "num": "36",
+          "name": "Leon",
+          "desc": "Schinken, Brokkoli, Sauce Hollandaise",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 12.5
+        },
+        {
+          "num": "37",
+          "name": "Chrissi",
+          "desc": "Schinken, Paprika, Zwiebeln, Ananas",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 13
+        },
+        {
+          "num": "38",
+          "name": "Quattro Formaggi",
+          "desc": "vier verschiedene Käsesorten",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 13
+        },
+        {
+          "num": "39",
+          "name": "Nita",
+          "desc": "Thunfisch, Ananas",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 13
+        },
+        {
+          "num": "40",
+          "name": "Salmone",
+          "desc": "Lachs",
+          "mini": 7,
+          "normal": 10,
+          "maxi": 13
+        },
+        {
+          "num": "41",
+          "name": "Mozzarella Pomodore",
+          "desc": "fr. Tomaten, Mozzarella, Basilikum",
+          "mini": 7,
+          "normal": 10,
+          "maxi": 13
+        },
+        {
+          "num": "42",
+          "name": "Special",
+          "desc": "Spinat, Champignons, Brokkoli, Sauce Hollandaise",
+          "mini": 7.5,
+          "normal": 10,
+          "maxi": 13
+        },
+        {
+          "num": "43",
+          "name": "Chef",
+          "desc": "Thunfisch, Zwiebeln, Paprika, Champignons",
+          "mini": 7.5,
+          "normal": 10,
+          "maxi": 13
+        },
+        {
+          "num": "44",
+          "name": "Rucola",
+          "desc": "Parmaschinken, Parmesan, Rucola",
+          "mini": 7.5,
+          "normal": 10,
+          "maxi": 13
+        },
+        {
+          "num": "45",
+          "name": "Miami",
+          "desc": "Gyros, Zwiebeln",
+          "mini": 7,
+          "normal": 9.5,
+          "maxi": 12.5
+        },
+        {
+          "num": "46",
+          "name": "Sante Fee",
+          "desc": "Gyros, frischen Tomaten, Schafskäse",
+          "mini": 7.5,
+          "normal": 10,
+          "maxi": 13
+        },
+        {
+          "num": "47",
+          "name": "Alaska",
+          "desc": "Salami, Gyros, milde Peperoni",
+          "mini": 7.5,
+          "normal": 10,
+          "maxi": 13
+        },
+        {
+          "num": "83",
+          "name": "Pizza Tim",
+          "desc": "Thunfisch, milde Peperoni, Zwiebel, Eier",
+          "mini": 7.5,
+          "normal": 10,
+          "maxi": 13
+        },
+        {
+          "num": "84",
+          "name": "Pizza Philipp",
+          "desc": "milde Peperoni, Kapern, Krabben, Oliven, Sardellen",
+          "mini": 7.5,
+          "normal": 10,
+          "maxi": 13
+        },
+        {
+          "num": "85",
+          "name": "Pizza Salat",
+          "desc": "Eisbergsalat, Tomaten, Gurken, Joghurtdressing",
+          "mini": 7.5,
+          "normal": 10,
+          "maxi": 13
+        },
+        {
+          "num": "86",
+          "name": "Pizza Sucuk",
+          "desc": "Knoblauchwurst",
+          "mini": 7,
+          "normal": 9,
+          "maxi": 13
+        },
+        {
+          "num": "87",
+          "name": "Pizza Döner",
+          "desc": "Döner, Zwiebeln",
+          "mini": 7,
+          "normal": 10,
+          "maxi": 13
+        }
+      ]
+    },
+    {
+      "id": "nudeln",
+      "titel": "Nudeln",
+      "typ": "simple",
+      "items": [
+        {
+          "num": "48",
+          "name": "Lasagne al Forno",
+          "desc": "",
+          "preis": 10
+        },
+        {
+          "num": "49",
+          "name": "Spaghetti Carbonara",
+          "desc": "",
+          "preis": 9.5
+        },
+        {
+          "num": "50",
+          "name": "Spaghetti Bolognese",
+          "desc": "",
+          "preis": 9.5
+        },
+        {
+          "num": "51",
+          "name": "Spaghetti Aglio Olio",
+          "desc": "Cherrytomaten, milde Peperoni, Olivenöl, Knoblauch",
+          "preis": 10
+        },
+        {
+          "num": "52",
+          "name": "Spaghetti Frutti di mare",
+          "desc": "Meeresfrüchte",
+          "preis": 10
+        }
+      ]
+    },
+    {
+      "id": "penne",
+      "titel": "Penne",
+      "typ": "simple",
+      "items": [
+        {
+          "num": "53",
+          "name": "Penne Alla Panna",
+          "desc": "Schinken, Sahnesauce",
+          "preis": 9.5
+        },
+        {
+          "num": "54",
+          "name": "Penne Al Forno",
+          "desc": "Schinken, Sahnesauce, Käse überbacken",
+          "preis": 10
+        },
+        {
+          "num": "55",
+          "name": "Penne Allabiata",
+          "desc": "Tomaten, Sahnesauce, Champignons, Paprika, Peperoni",
+          "preis": 10
+        },
+        {
+          "num": "56",
+          "name": "Penne André",
+          "desc": "Tomaten, Sahnesauce, Brokkoli, Champignons, Paprika",
+          "preis": 10
+        },
+        {
+          "num": "57",
+          "name": "Penne Marcel",
+          "desc": "Tomaten, Sahnesauce, Thunfisch, Krabben, Mais, Paprika, Peperoni",
+          "preis": 10
+        },
+        {
+          "num": "58",
+          "name": "Penne Adi",
+          "desc": "Tomatensahnesauce, Hähnchenbrust, Brokkoli",
+          "preis": 10
+        },
+        {
+          "num": "59",
+          "name": "Penne Mare E Monti",
+          "desc": "Tomaten, Sahnesauce, Thunfisch, Krabben, Käse überbacken",
+          "preis": 10
+        },
+        {
+          "num": "60",
+          "name": "Penne Bolognese",
+          "desc": "Rinderhackfleisch",
+          "preis": 10
+        },
+        {
+          "num": "61",
+          "name": "Penne Salmone",
+          "desc": "Sahnesauce, Lachs",
+          "preis": 10
+        }
+      ]
+    },
+    {
+      "id": "tortellini",
+      "titel": "Tortellini",
+      "typ": "simple",
+      "items": [
+        {
+          "num": "62",
+          "name": "Tortellini Al Forno",
+          "desc": "Schinken, Sahnesauce, Käse überbacken",
+          "preis": 10
+        },
+        {
+          "num": "63",
+          "name": "Tortellini Chef",
+          "desc": "Schinken, Champignons, Sahnesauce",
+          "preis": 10
+        },
+        {
+          "num": "64",
+          "name": "Tortellini Bolognese",
+          "desc": "Rinderhackfleisch",
+          "preis": 10
+        },
+        {
+          "num": "65",
+          "name": "Tortellini Jonni",
+          "desc": "Brokkoli, Schinken, Sahnesauce",
+          "preis": 10
+        },
+        {
+          "num": "66",
+          "name": "Tortellini Lukas",
+          "desc": "Schinken, Spinat, Sahnesauce",
+          "preis": 10
+        }
+      ]
+    },
+    {
+      "id": "gnocchi",
+      "titel": "Gnocchi",
+      "typ": "simple",
+      "items": [
+        {
+          "num": "67",
+          "name": "Gnocchi Bolognese",
+          "desc": "Rinderhackfleisch",
+          "preis": 10
+        },
+        {
+          "num": "68",
+          "name": "Gnocchi",
+          "desc": "Gorgonzola, Spinat, Sahnesauce",
+          "preis": 10
+        },
+        {
+          "num": "69",
+          "name": "Gnocchi Quattro Formaggi",
+          "desc": "vier verschiedene Käsesorten, Sahnesauce",
+          "preis": 10
+        }
+      ]
+    },
+    {
+      "id": "salat",
+      "titel": "Salat",
+      "typ": "simple",
+      "items": [
+        {
+          "num": "70",
+          "name": "Insalata Mista",
+          "desc": "Tomaten, Gurken, Salat",
+          "preis": 6
+        },
+        {
+          "num": "71",
+          "name": "Insalata Primavera",
+          "desc": "Tomaten, Gurken, Salat, Thunfisch, Schinken, Käse",
+          "preis": 9
+        },
+        {
+          "num": "72",
+          "name": "Insalata della Casa",
+          "desc": "Tomaten, Gurken, Salat, Thunfisch, Zwiebeln, Käse, Eier",
+          "preis": 9
+        },
+        {
+          "num": "73",
+          "name": "Insalata Pinocchio",
+          "desc": "Tomaten, Gurken, Salat, Zwiebeln, Mais, Artischocken, Möhren, Paprika, Käse",
+          "preis": 10
+        },
+        {
+          "num": "74",
+          "name": "Insalata della Chef",
+          "desc": "Tomaten, Gurken, Salat, Hähnchen",
+          "preis": 9.5
+        },
+        {
+          "num": "75",
+          "name": "Insalata Mozzarella Pomodoro",
+          "desc": "Salat, Tomaten, Mozzarella, fr. Basilikum",
+          "preis": 10
+        }
+      ]
+    },
+    {
+      "id": "pizzabroetchen",
+      "titel": "Pizzabrötchen (8 Stk.)",
+      "typ": "simple",
+      "items": [
+        {
+          "num": "76",
+          "name": "Pizzabrötchen mit Kräutercreme",
+          "desc": "",
+          "preis": 4
+        },
+        {
+          "num": "77",
+          "name": "Pizzabrötchen mit Thunfisch",
+          "desc": "",
+          "preis": 7
+        },
+        {
+          "num": "78",
+          "name": "Pizzabrötchen mit Salami",
+          "desc": "",
+          "preis": 7
+        },
+        {
+          "num": "79",
+          "name": "Pizzabrötchen mit Schinken",
+          "desc": "",
+          "preis": 7
+        },
+        {
+          "num": "80",
+          "name": "Pizzabrötchen mit Schafskäse, Spinat",
+          "desc": "",
+          "preis": 7
+        },
+        {
+          "num": "81",
+          "name": "Pizzabrötchen mit Knoblauchwurst",
+          "desc": "",
+          "preis": 7
+        },
+        {
+          "num": "82",
+          "name": "Pizzabrötchen mit Käse",
+          "desc": "",
+          "preis": 6
+        }
+      ]
+    },
+    {
+      "id": "haehnchen-curry",
+      "titel": "Hähnchen mit Curry",
+      "typ": "simple",
+      "items": [
+        {
+          "num": "140",
+          "name": "Hähnchengeschnetzeltes Makkaroni",
+          "desc": "Makkaroni, Curry",
+          "preis": 10
+        },
+        {
+          "num": "141",
+          "name": "Hähnchengeschnetzeltes Pilze, Brokkoli",
+          "desc": "Makkaroni, Pilzen, Brokkoli, Curry",
+          "preis": 11
+        },
+        {
+          "num": "142",
+          "name": "Hähnchengeschnetzeltes Krabben, Champignons",
+          "desc": "Makkaroni, Krabben, Champignons, Curry",
+          "preis": 11
+        }
+      ]
+    },
+    {
+      "id": "getraenke",
+      "titel": "Getränke",
+      "typ": "simple",
+      "nummer_zeigen": false,
+      "items": [
+        {
+          "num": "",
+          "name": "Cola",
+          "desc": "0,33 l Flasche",
+          "preis": 2.5
+        },
+        {
+          "num": "",
+          "name": "Fanta",
+          "desc": "0,33 l Flasche",
+          "preis": 2.5
+        },
+        {
+          "num": "",
+          "name": "Sprite",
+          "desc": "0,33 l Flasche",
+          "preis": 2.5
+        },
+        {
+          "num": "",
+          "name": "Apfelschorle",
+          "desc": "0,33 l Flasche",
+          "preis": 2.5
+        },
+        {
+          "num": "",
+          "name": "Mineralwasser",
+          "desc": "0,25 l Flasche",
+          "preis": 2.5
+        },
+        {
+          "num": "",
+          "name": "Bier",
+          "desc": "0,33 l Flasche",
+          "preis": 2.5
+        },
+        {
+          "num": "",
+          "name": "Rotwein Lambrusco",
+          "desc": "0,2 l Flasche",
+          "preis": 6
+        },
+        {
+          "num": "",
+          "name": "Rotwein Primitivo",
+          "desc": "0,2 l Flasche",
+          "preis": 6
+        },
+        {
+          "num": "",
+          "name": "Weißwein Lugana",
+          "desc": "0,33 l Flasche",
+          "preis": 6
+        },
+        {
+          "num": "",
+          "name": "Weißwein Pinot Grigio",
+          "desc": "0,33 l Flasche",
+          "preis": 6
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "titel": "Desserts",
+      "typ": "simple",
+      "nummer_zeigen": false,
+      "items": [
+        {
+          "num": "",
+          "name": "Tiramisu",
+          "desc": "",
+          "preis": 5.5
+        },
+        {
+          "num": "",
+          "name": "Panna Cotta",
+          "desc": "",
+          "preis": 5
+        }
+      ]
+    },
+    {
+      "id": "mittagsangebote",
+      "titel": "Mittagsangebote (Di.-Fr. 11:00-14:00 Uhr)",
+      "typ": "simple",
+      "nur_mittags": true,
+      "nummer_zeigen": false,
+      "items": [
+        {
+          "num": "",
+          "name": "Mittagsangebot Pizza",
+          "desc": "Jede 28er Pizza mit Getränk 0,33 l",
+          "preis": 10.5
+        },
+        {
+          "num": "",
+          "name": "Mittagsangebot Nudelgericht",
+          "desc": "Jedes Nudelgericht mit Getränk 0,33 l",
+          "preis": 10.5
+        },
+        {
+          "num": "",
+          "name": "Mittagsangebot Salat",
+          "desc": "Jeder große Salat mit Getränk 0,33 l",
+          "preis": 10.5
+        }
+      ]
+    },
+    {
+      "id": "spezialangebote",
+      "titel": "Spezialangebote",
+      "typ": "familie",
+      "nummer_zeigen": false,
+      "items": [
+        {
+          "num": "",
+          "name": "Familienpizza 40 cm",
+          "desc": "nach Wahl mit max. 3 Zutaten",
+          "preis": 20,
+          "belegbar": true
+        },
+        {
+          "num": "",
+          "name": "Familienpizza 50 cm",
+          "desc": "nach Wahl mit max. 3 Zutaten",
+          "preis": 28.5,
+          "belegbar": true
+        },
+        {
+          "num": "",
+          "name": "Party-Pizzablech",
+          "desc": "40 x 60 cm",
+          "preis": 30
+        },
+        {
+          "num": "",
+          "name": "Nudel Blech XXL",
+          "desc": "",
+          "preis": 30
+        }
+      ]
+    },
+    {
+      "id": "abholer-angebote",
+      "titel": "Abholer-Angebote",
+      "typ": "simple",
+      "nummer_zeigen": false,
+      "items": [
+        {
+          "num": "",
+          "name": "Super Angebot 1",
+          "desc": "3 Pizzen (28 cm), 1 Cola (0,33 l), 6 Pizzabrötchen",
+          "preis": 25.5
+        },
+        {
+          "num": "",
+          "name": "Super Angebot 2",
+          "desc": "2 Pizzen (28 cm), 1 Nudelgericht, 1 Cola (0,33 l), 6 Pizzabrötchen",
+          "preis": 25.5
+        },
+        {
+          "num": "",
+          "name": "Maxi Angebot",
+          "desc": "2 Pizzen (32 cm), 1 großer Salat, 1 Cola (1 l), 6 Pizzabrötchen",
+          "preis": 29.5
+        }
+      ]
+    },
+    {
+      "id": "buffet",
+      "titel": "Italienisches Buffet",
+      "typ": "simple",
+      "nummer_zeigen": false,
+      "items": [
+        {
+          "num": "",
+          "name": "Italienisches Buffet",
+          "desc": "Jeden 2. Samstag im Monat, Termin bitte vorab anfragen",
+          "preis": 22.9
+        }
+      ]
+    }
+  ]
+}

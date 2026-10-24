@@ -1,0 +1,2 @@
+Abstammung: 7b3ddea 2026-10-20 Berichte: Summenzeilen lesbar, kein "!9", Datum ohne doppelten Punkt
+Vorlage:    /c/Users/Abed Falah/dev/gastronomie/PinocchioNordkirchen
