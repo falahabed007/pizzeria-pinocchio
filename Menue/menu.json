@@ -418,7 +418,7 @@
           "name": "Pizza Sucuk",
           "desc": "Knoblauchwurst",
           "mini": 7,
-          "normal": 9,
+          "normal": 10,
           "maxi": 13
         },
         {
@@ -860,6 +860,7 @@
     {
       "id": "abholer-angebote",
       "titel": "Abholer-Angebote",
+      "note": "Nur bei Abholung. Bitte die gewünschten Pizzen im Notizfeld angeben.",
       "typ": "simple",
       "nummer_zeigen": false,
       "items": [
@@ -880,20 +881,6 @@
           "name": "Maxi Angebot",
           "desc": "2 Pizzen (32 cm), 1 großer Salat, 1 Cola (1 l), 6 Pizzabrötchen",
           "preis": 29.5
-        }
-      ]
-    },
-    {
-      "id": "buffet",
-      "titel": "Italienisches Buffet",
-      "typ": "simple",
-      "nummer_zeigen": false,
-      "items": [
-        {
-          "num": "",
-          "name": "Italienisches Buffet",
-          "desc": "Jeden 2. Samstag im Monat, Termin bitte vorab anfragen",
-          "preis": 22.9
         }
       ]
     }
