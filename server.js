@@ -540,8 +540,17 @@ function berechneRabatt() {
 }
 
 // ── Neue Web-Bestellung (pending) ────────────────────────────────
+// Abholer-Angebote (Super Angebot 1/2, Maxi Angebot) gibt es nur bei Abholung
+const NUR_ABHOLUNG_RE = /^(super angebot|maxi angebot)/i;
+function lieferungGesperrt(body) {
+  return body && body.mode === 'lieferung' && Array.isArray(body.items) &&
+    body.items.some(i => NUR_ABHOLUNG_RE.test(String((i && i.name) || '').trim()));
+}
+const NUR_ABHOLUNG_MSG = 'Die Abholer-Angebote (Super Angebot, Maxi Angebot) können nicht geliefert werden. Bitte wähle Abholung oder nimm sie aus dem Warenkorb.';
+
 app.post('/api/orders', async (req, res) => {
   try {
+    if (lieferungGesperrt(req.body)) return res.status(400).json({ message: NUR_ABHOLUNG_MSG });
     // userId aus Kunden-JWT extrahieren falls vorhanden (Gastbestellung bleibt möglich)
     let userId = null;
     const authHeader = req.headers.authorization;
@@ -606,6 +615,7 @@ app.get('/api/orders/status/:token', async (req, res) => {
 // ── Stripe Checkout ───────────────────────────────────────────────
 app.post('/api/create-stripe-checkout', async (req, res) => {
   try {
+    if (lieferungGesperrt(req.body)) return res.status(400).json({ message: NUR_ABHOLUNG_MSG });
     const { items, subtotal, deliveryFee, serviceFee, customer, mode, note } = req.body;
     const orderNum = await getNextOrderNum();
 
@@ -742,6 +752,7 @@ app.post('/api/verify-payment', async (req, res) => {
 // ── PayPal Checkout ───────────────────────────────────────────────
 app.post('/api/create-paypal-order', async (req, res) => {
   try {
+    if (lieferungGesperrt(req.body)) return res.status(400).json({ message: NUR_ABHOLUNG_MSG });
     const { items, subtotal, deliveryFee, serviceFee, customer, mode, note } = req.body;
     const orderNum = await getNextOrderNum();
 

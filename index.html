@@ -1700,6 +1700,9 @@ function updateCartSummary() {
         let html = `Warenwert: <b>${summeWaren.toFixed(2).replace('.', ',')} €</b><br>`;
         html += `Liefergebühr: <b>${config.fee.toFixed(2).replace('.', ',')} €</b><br>`;
         html += `<span style="color:var(--pinocciobeckum-gruen); font-weight:bold; font-size:14px;">Gesamt: ${gesamt.toFixed(2).replace('.', ',')} €</span>`;
+        if (hatAbholerAngebot()) {
+            html += `<br><span style="color:red; font-size:12px; font-weight:bold;">⚠️ Abholer-Angebote können nicht geliefert werden. Bitte Abholung wählen oder entfernen.</span>`;
+        }
         if (summeWaren < config.min) {
             const rest = (config.min - summeWaren).toFixed(2).replace('.', ',');
             html += `<br><span style="color:red; font-size:12px; font-weight:bold;">⚠️ Noch ${rest} € bis zum Mindestbestellwert (${config.min.toFixed(2).replace('.', ',')} €)</span>`;
@@ -1710,8 +1713,15 @@ function updateCartSummary() {
     }
 }
 
+// Abholer-Angebote gibt es nur bei Abholung
+function hatAbholerAngebot() {
+    return warenkorb.some(i => /^(super angebot|maxi angebot)/i.test(String(i.name || '').trim()));
+}
+const NUR_ABHOLUNG_MELDUNG = 'Die Abholer-Angebote (Super Angebot, Maxi Angebot) können nicht geliefert werden. Bitte wähle Abholung oder nimm sie aus dem Warenkorb.';
+
 function goToCheckoutFromCart() {
     if (warenkorb.length === 0) return;
+    if (currentSelection === 'delivery' && hatAbholerAngebot()) { alert(NUR_ABHOLUNG_MELDUNG); return; }
     // Mindestbestellwert prüfen bei Lieferung
     if (currentSelection === 'delivery') {
         const stadtKey = document.getElementById('cart-stadt').value;
@@ -2420,6 +2430,7 @@ async function processOrder() {
     const zahlung = document.getElementById('c-zahlung').value;
     const notiz = document.getElementById('c-notiz').value.trim();
 
+    if (currentSelection === 'delivery' && hatAbholerAngebot()) { alert(NUR_ABHOLUNG_MELDUNG); return; }
     if (!vorname || !nachname) {
         alert("Bitte gib Vor- und Nachnamen ein.");
         return;
