@@ -656,8 +656,8 @@ html,body{height:100%;font-family:'DM Sans',sans-serif;background:var(--pinoccio
 <script>
 // ── Pizza-Popup ──
 let pizzaBasePrice=0, sizeSurcharge=0, pizzaPreise={}, pizzaGroesse='normal';
-// Aufpreis je Belag: die Karte nennt keine Extrabelag-Preise
-const PIZZA_EXTRA_PREIS={mini:0,normal:0,maxi:0};   // FEHLT_EXTRABELAG_PREIS
+// Aufpreis je Belag: 1,50 € in jeder Größe
+const PIZZA_EXTRA_PREIS={mini:1.50,normal:1.50,maxi:1.50};
 const PIZZA_GROESSE_LABEL={mini:'klein 20 cm',normal:'normal 28 cm',maxi:'Maxi 32 cm'};
 const pizzaExtrasList=[
   "Artischocken","Broccoli","Ei","Feta-Käse","Gorgonzola","Hollandaise",
@@ -785,7 +785,7 @@ function closeDipPopup(){document.getElementById('dipPopup').style.display='none
 
 // ── Familienpizza-Popup ──
 let currentFamBasePrice=0, selectedOrder=[];
-const FREE_EXTRAS=3, EXTRA_PRICE_FLAT=3.00;
+const FREE_EXTRAS=3, EXTRA_PRICE_FLAT=1.50;
 const famExtrasList=[
   {n:"Artischocken"},{n:"Broccoli"},{n:"Ei"},{n:"Gorgonzola"},{n:"Hollandaise"},
   {n:"Käse"},{n:"Mais"},{n:"Meeresfrüchte"},{n:"Mozzarella"},{n:"Oliven"},

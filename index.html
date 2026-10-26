@@ -2926,11 +2926,11 @@ let pizzaBasePrice = 0;
 let sizeSurcharge = 0;
 
 // Extrabelag je Größe. Der Standard gilt für jede Zutat, die nicht in
-// EXTRA_PREIS_SONDER steht. Die Karte nennt keine Extrabelag-Preise.
-const EXTRA_PREIS_STANDARD = { 20: 0, 28: 0, 32: 0 };   // FEHLT_EXTRABELAG_PREIS
+// EXTRA_PREIS_SONDER steht. Extrabelag: 1,50 € je Zutat, in jeder Größe gleich.
+const EXTRA_PREIS_STANDARD = { 20: 1.50, 28: 1.50, 32: 1.50 };
 
 // Abweichende Preise je Zutat und Größe, z. B. { 28: { 'Lachs': 2.00 } }
-const EXTRA_PREIS_SONDER = {};   // FEHLT_EXTRABELAG_PREIS
+const EXTRA_PREIS_SONDER = {};
 
 function extraPreis(zutat, groesse) {
     const sonder = EXTRA_PREIS_SONDER[groesse];
@@ -3654,7 +3654,7 @@ function closeDipPopup() {
 <script>
 let currentFamBasePrice = 0;
 const FREE_EXTRAS = 3;
-const EXTRA_PRICE_FLAT = 0;   // FEHLT_EXTRABELAG_PREIS
+const EXTRA_PRICE_FLAT = 1.50;
 let selectedOrder = [];
 
 const famExtrasList = [
